@@ -142,6 +142,11 @@ namespace FenixQuartz
                 definitions.Add(AddIpcOffset("baroCpt", "float", 4, ref nextOffset));
                 definitions.Add(AddIpcOffset("baroCptStd", "byte", 1, ref nextOffset));
                 definitions.Add(AddIpcOffset("baroCptMb", "byte", 1, ref nextOffset));
+				
+  			    definitions.Add(AddIpcOffset("xpdrDigit1", "byte", 1, ref nextOffset));
+                definitions.Add(AddIpcOffset("xpdrDigit2", "byte", 1, ref nextOffset));
+                definitions.Add(AddIpcOffset("xpdrDigit3", "byte", 1, ref nextOffset));
+                definitions.Add(AddIpcOffset("xpdrDigit4", "byte", 1, ref nextOffset));
             }
             //// RAW VALUES (L-Var)
             else
@@ -172,7 +177,6 @@ namespace FenixQuartz
 
                 //XPDR
                 definitions.Add(new OutputDefinition("xpdr"));
-                definitions.Add(new OutputDefinition("xpdrDigits"));
 
                 if (!App.ignoreBatteries)
                 {
@@ -194,6 +198,10 @@ namespace FenixQuartz
                 definitions.Add(new OutputDefinition("baroCpt"));
                 definitions.Add(new OutputDefinition("baroCptStd"));
                 definitions.Add(new OutputDefinition("baroCptMb"));
+                definitions.Add(new OutputDefinition("xpdrDigit1"));
+                definitions.Add(new OutputDefinition("xpdrDigit2"));
+                definitions.Add(new OutputDefinition("xpdrDigit3"));
+                definitions.Add(new OutputDefinition("xpdrDigit4"));
             }
 
 

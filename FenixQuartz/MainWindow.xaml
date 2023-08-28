@@ -123,6 +123,13 @@
                 <Label Name="xpdrDigits"></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
+                <Label>xpdrDigits</Label>
+                <Label BorderThickness="1" BorderBrush="DarkGray" Width="30" Name="xpdrDigit1"></Label>
+                <Label BorderThickness="1" BorderBrush="DarkGray" Width="30" Name="xpdrDigit2"></Label>
+                <Label BorderThickness="1" BorderBrush="DarkGray" Width="30" Name="xpdrDigit3"></Label>
+                <Label BorderThickness="1" BorderBrush="DarkGray" Width="30" Name="xpdrDigit4"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
                 <Label>bat1Display</Label>
                 <Label Name="bat1Display"></Label>
             </StackPanel>

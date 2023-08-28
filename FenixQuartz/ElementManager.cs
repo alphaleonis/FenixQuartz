@@ -46,6 +46,10 @@ namespace FenixQuartz
         public bool isBaroStd = false;
         //public bool xpdrWasCleared = false;
         //public int xpdrClearedCounter = 0;
+        public int xpdrDigit1 = 0;
+        public int xpdrDigit2 = 0;
+        public int xpdrDigit3 = 0;
+        public int xpdrDigit4 = 0;
 
         public ElementManager(List<OutputDefinition> definitions)
         {
@@ -924,6 +928,7 @@ namespace FenixQuartz
                 {
                     IPCValues["xpdr"].SetValue((short)-1);
                 }
+                UpdateXpdrDigits(((input < 0 || input > 7777) && digits > 0) ? disp : input, digits);
             }
 
             //if (input == -1 && !xpdrWasCleared)
@@ -971,6 +976,39 @@ namespace FenixQuartz
             //}
         }
 
+  private void UpdateXpdrDigits(int input, int digitCount)
+        {
+            int digit1 = -1, digit2 = -1, digit3 = -1, digit4 = -1;
+            if (digitCount >= 1)
+            {
+                digit1 = input / ((int)Math.Pow(10, digitCount - 1));
+            }
+
+            if (digitCount >= 2)
+            {
+                digit2 = (input / ((int)Math.Pow(10, digitCount - 2)) % 10);
+            }
+
+            if (digitCount >= 3)
+            {
+                digit3 = (input / ((int)Math.Pow(10, digitCount - 3)) % 10);
+            }
+
+            if (digitCount == 4)
+            {
+                digit4 = (input / ((int)Math.Pow(10, digitCount - 4)) % 10);
+            }
+
+            xpdrDigit1 = digit1;
+            xpdrDigit2 = digit2;
+            xpdrDigit3 = digit3;
+            xpdrDigit4 = digit4;
+            IPCValues["xpdrDigit1"].SetValue(digit1);
+            IPCValues["xpdrDigit2"].SetValue(digit2);
+            IPCValues["xpdrDigit3"].SetValue(digit3);
+            IPCValues["xpdrDigit4"].SetValue(digit4);
+        }
+		
         private void UpdateBatteries()
         {
             double value = MemoryValues["bat1Display"].GetValue() ?? 0.0;
