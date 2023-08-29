@@ -92,6 +92,21 @@
                 <Label>isisBaro3</Label>
                 <Label Name="isisBaro3"></Label>
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>baroCptIsStd</Label>
+                <Label Name="baroCptIsStd"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>baroFoIsStd</Label>
+                <Label Name="baroFoIsStd"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>xpdrDigits</Label>
+                <Label BorderThickness="1" BorderBrush="DarkGray" Width="30" Name="xpdrDigit1"></Label>
+                <Label BorderThickness="1" BorderBrush="DarkGray" Width="30" Name="xpdrDigit2"></Label>
+                <Label BorderThickness="1" BorderBrush="DarkGray" Width="30" Name="xpdrDigit3"></Label>
+                <Label BorderThickness="1" BorderBrush="DarkGray" Width="30" Name="xpdrDigit4"></Label>
+            </StackPanel>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="1">
             <StackPanel Orientation="Horizontal">

@@ -134,6 +134,10 @@ namespace FenixQuartz
 
                 //XPDR Digits
                 definitions.Add(AddIpcOffset("xpdrDigits", "short", 2, ref nextOffset));
+
+                // BARO
+                definitions.Add(AddIpcOffset("baroCptIsStd", "byte", 1, ref nextOffset));
+                definitions.Add(AddIpcOffset("baroFoIsStd", "byte", 0, ref nextOffset));
             }
             //// RAW VALUES (L-Var)
             else
@@ -181,6 +185,14 @@ namespace FenixQuartz
                 //CHR + ET
                 definitions.Add(new OutputDefinition("clockChr"));
                 definitions.Add(new OutputDefinition("clockEt"));
+
+                // BARO
+                definitions.Add(new OutputDefinition("baroCptIsStd"));
+                definitions.Add(new OutputDefinition("baroFoIsStd"));
+                definitions.Add(new OutputDefinition("xpdrDigit1"));
+                definitions.Add(new OutputDefinition("xpdrDigit2"));
+                definitions.Add(new OutputDefinition("xpdrDigit3"));
+                definitions.Add(new OutputDefinition("xpdrDigit4"));
             }
 
 

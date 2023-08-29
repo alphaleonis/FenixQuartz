@@ -52,6 +52,9 @@ namespace FenixQuartz
                 isisStd3.Content = values["isisStd3"].GetValue() ?? 0;
                 isisBaro3.Content = values["isisBaro3"].GetValue() ?? 0;
 
+                baroCptIsStd.Content = values["baroCptIsStd"].GetValue() ?? 0;
+                baroFoIsStd.Content = values["baroFoIsStd"].GetValue() ?? 0;
+
                 com1Active.Content = values["com1Active"].GetValue() ?? 0;
                 com1Standby.Content = values["com1Standby"].GetValue() ?? 0;
                 com2Active.Content = values["com2Active"].GetValue() ?? 0;
@@ -102,6 +105,11 @@ namespace FenixQuartz
                 speedVAPP_4.Content = values["speedVAPP-4"].GetValue() ?? 0;
                 speedVAPP_5.Content = values["speedVAPP-5"].GetValue() ?? 0;
                 speedVAPP_5.Content = values["speedVAPP-6"].GetValue() ?? 0;
+
+                xpdrDigit1.Content = manager.xpdrDigit1;
+                xpdrDigit2.Content = manager.xpdrDigit2;
+                xpdrDigit3.Content = manager.xpdrDigit3;
+                xpdrDigit4.Content = manager.xpdrDigit4;
             }
         }
 
